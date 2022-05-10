@@ -1,44 +1,9 @@
-<h1>Angular Router App</h1>
-<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
-<nav>
-  <ul>
-    <li><a routerLink="/app-login-page" routerLinkActive="active">First Component</a></li>
-    <li><a routerLink="/register" routerLinkActive="active">Second Component</a></li>
-  </ul>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit"  (click)="SendToLoginPage()">Login</button>
+  <button class="btn btn-outline-success my-4 my-sm-0" type="submit"  (click)="SendToRegisterPage()">Register</button>
+
 </nav>
-<!-- The routed views render in the <router-outlet>-->
+
 <router-outlet></router-outlet>
-<hr>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Paper Stack</title>
-  <link rel="stylesheet" type="text/css" href="app.component.css" />
-
-
-</head>
-<body>
-<div class="container">
-  <section id="content">
-    <form action="">
-      <h1>Login Form</h1>
-      <div>
-        <input type="text" placeholder="Username" required="" id="username" />
-      </div>
-      <div>
-        <input type="password" placeholder="Password" required="" id="password" />
-      </div>
-      <div>
-        <input type="submit" value="Log in" />
-        <a href="#">Lost your password?</a>
-        <a routerLink="register">Register</a>
-      </div>
-    </form><!-- form -->
-
-  </section><!-- content -->
-</div><!-- container -->
-</body>
-</html>

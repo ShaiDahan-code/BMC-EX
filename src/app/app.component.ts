@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -9,4 +10,18 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   title = 'BMC-EX';
+  router: string;
+
+  constructor(private _router: Router){
+
+    this.router = _router.url;
+  }
+  SendToLoginPage(){
+    this._router.navigate(['/login']);
+  }
+  SendToRegisterPage(){
+    this._router.navigate(['/register']);
+  }
+
+
 }
