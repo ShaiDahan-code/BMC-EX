@@ -22,6 +22,4 @@ export class AppComponent {
   SendToRegisterPage(){
     this._router.navigate(['/register']);
   }
-
-
 }
