@@ -265,3 +265,10 @@ form:after {
   height:35px;
   width:100px;
 }
+.btn{
+
+  background-color: #000000;
+}
+.btn btn-secondary{
+  background-color: black;
+}

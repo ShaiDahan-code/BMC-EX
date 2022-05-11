@@ -58,7 +58,7 @@ export class RegisterComponent implements OnInit {
     if(taste!=null){
       this.exist=true;
     }
-    if(!this.exist && this.username.length>0 && !this.confirmFlag){
+    if(!this.exist && this.username.length>0 && !this.confirmFlag && !this.lenFlag){
       localStorage.setItem(this.username,this.password);
       this._router.navigate(['/login'])
       this.final=true;
