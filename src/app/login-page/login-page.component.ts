@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login-page',
@@ -6,14 +7,50 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
-  check = "Hello";
-
-  Fnction(){
-    console.log(this.check);
+  router:string = "";
+  username:string="";
+  password:string="";
+  check:any;
+  userFlag: boolean=false;
+  passFlag:boolean=false;
+  userLen:boolean=false;
+  passLen:boolean=false;
+  constructor(private _router : Router) {
+    this.router = _router.url;
   }
-  constructor() { }
-
   ngOnInit(): void {
   }
+  nameCheck():void {
+    for(let i=0;i<localStorage.length;i++){
+      if(localStorage.key(i)===this.username){
+        this.userFlag=false;
+        return;
+      }
+    }
+    this.userFlag=true;
+  }
+  login() {
+    this.userFlag=false;
+    this.passFlag=false;
+    this.passLen=false;
+    this.userLen=false;
+    if(this.password.length===0 && this.username.length===0){
+      this.userLen=this.passLen=true;
+      return;
+    }
+    this.nameCheck();
+      for(let i=0;i<localStorage.length;i++){
+        if(localStorage.key(i)===this.username){
+          this.check=localStorage.key(i);
+          console.log(this.check);
+          if(localStorage.getItem(this.check)===this.password){
+            this._router.navigate(['/menu'])
+          }
+          else{
+            this.passFlag=true;
+          }
+        }
+      }
+    }
 
 }
