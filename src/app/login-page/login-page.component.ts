@@ -15,6 +15,7 @@ export class LoginPageComponent implements OnInit {
   passFlag:boolean=false;
   userLen:boolean=false;
   passLen:boolean=false;
+  isLogin:boolean=false;
   constructor(private _router : Router) {
     this.router = _router.url;
   }
@@ -44,6 +45,7 @@ export class LoginPageComponent implements OnInit {
           this.check=localStorage.key(i);
           console.log(this.check);
           if(localStorage.getItem(this.check)===this.password){
+            this.isLogin=true;
             this._router.navigate(['/menu'])
           }
           else{
@@ -53,4 +55,7 @@ export class LoginPageComponent implements OnInit {
       }
     }
 
+  navigate() {
+    this._router.navigate(['/register'])
+  }
 }

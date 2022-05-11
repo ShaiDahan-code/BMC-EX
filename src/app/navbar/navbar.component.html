@@ -17,48 +17,42 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-        <li class="nav-item">
-          <a class="nav-link" href="#">Planning</a>
+        <li ngbDropdown class="nav-item">
+          <a href (click)="false" class="nav-link" ngbDropdownToggle>Definition</a>
+          <div ngbDropdownMenu>
+            <br>
+            <button ngbDropdownItem>Tasks</button>
+            <div class="dropdown-divider"></div>
+
+          </div>
+        </li>
+        <li ngbDropdown class="nav-item">
+          <a href (click)="false" class="nav-link" ngbDropdownToggle>Monitoring</a>
+          <div ngbDropdownMenu>
+            <br>
+            <button ngbDropdownItem>Action</button>
+            <button ngbDropdownItem>Another action</button>
+            <button ngbDropdownItem>Something else here</button>
+            <div class="dropdown-divider"></div>
+            <button ngbDropdownItem>Separated link</button>
+          </div>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#">Monitoring</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Workflow Insight</a>
-        </li>
-        <li class="nav-item">
-          <mat-select>
-            <mat-option>
-              option 1
-              option2 ...
-            </mat-option>
-            <a class="nav-link" href="#">Manged Transfer</a>
-          </mat-select>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tools</a>
-        </li>
-        <li class="nav-item">
-          <mat-select>
-            <mat-option>
-              option 1
-              option2 ...
-            </mat-option>
-            <a class="nav-link" href="#">Tools</a>
-          </mat-select>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Configuration</a>
-        </li>
-        <h1>
-          hey<i class="fa-solid fa-bell"></i>
-        </h1>
+
+
+
+
+
       </ul>
 
       <form class="d-flex">
-        <button class="btn btn-outline-success" type="submit" routerLink="/login">Login</button>
-        <button class="btn btn-outline-success" type="submit" routerLink="/register">Resign</button>
+        <li ngbDropdown class="nav-item">
+          <a href (click)="false" class="nav-link" ngbDropdownToggle>emuser</a>
+          <div ngbDropdownMenu>
+            <br>
+            <button ngbDropdownItem (click)="move()">Logout</button>
+          </div>
+        </li>
       </form>
     </div>
   </div>
