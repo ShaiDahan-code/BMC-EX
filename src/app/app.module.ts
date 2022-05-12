@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatSelectModule} from "@angular/material/select";
 import {MatIconModule} from "@angular/material/icon";
+import { AlertComponent } from './alert/alert.component';
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 @NgModule({
   declarations: [
@@ -19,18 +21,20 @@ import {MatIconModule} from "@angular/material/icon";
     LoginPageComponent,
     RegisterComponent,
     NavbarComponent,
-    MenuComponent
+    MenuComponent,
+    AlertComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    MatTabsModule,
-    MatSelectModule,
-    MatIconModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        MatTabsModule,
+        MatSelectModule,
+        MatIconModule,
+        MatProgressBarModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

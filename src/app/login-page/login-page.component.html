@@ -9,6 +9,7 @@
 <div class="container" >
   <div class="login-wrap">
     <! ----------- LOGIN ----------- -->
+
     <div class="login-html">
       <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
       <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
@@ -62,12 +63,11 @@
           <div class="group">
             <label  class="label">Repeat Password</label>
             <input id="pass" type="password" class="input" data-type="password" placeholder="confirm Password" required="true" id="confirm_password" [(ngModel)]="SUconfirm" name="confirm">
-
           </div>
           <br><br>
           <div class="group">
 
-            <button type="submit" class="button" (click)="register()" value="Sign Up">Register</button>
+            <button type="submit" class="button" (click)="register()" value="Sign Up" [attr.attribute-you-are-targeting]="SUsuccess"  >Register</button>
 
           </div>
           <div class="hr"></div>
@@ -75,7 +75,7 @@
             <a for="tab-1">Already Member?</a>
           </div>
         </div>
-        <! ----------- END SIGN UO----------- -->
+        <! ----------- END SIGN Up----------- -->
       </div>
     </div>
   </div>
