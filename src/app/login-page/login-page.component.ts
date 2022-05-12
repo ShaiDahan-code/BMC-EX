@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {AppComponent} from "../app.component";
 
 @Component({
   selector: 'app-login-page',
@@ -8,6 +7,7 @@ import {AppComponent} from "../app.component";
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
+  SUsuccess:boolean=false;
   SUusername:string="";
   SUpassword:string="";
   SUconfirm:string="";
@@ -65,7 +65,7 @@ export class LoginPageComponent implements OnInit {
     }
   }
   register() {
-    this.SUexist=this.SUsubmit=this.SUlenFlag=this.SUuserFlag=this.SUconfirmFlag=this.SUempty=this.SUfinal=false;
+    this.SUexist=this.SUsubmit=this.SUlenFlag=this.SUuserFlag=this.SUconfirmFlag=this.SUempty=this.SUfinal=false,this.SUsuccess;
     this.lenPass();
     this.checkName();
     this.checkPassword();
@@ -78,8 +78,13 @@ export class LoginPageComponent implements OnInit {
     }
     if(!this.SUexist && this.SUusername.length>0 && !this.SUconfirmFlag && !this.SUlenFlag){
       localStorage.setItem(this.SUusername,this.SUpassword);
-      this._router.navigate(['/login'])
+      this._router.navigate([''])
+      console.log("hey")
       this.SUfinal=true;
+      alert("Thank you!\n" +
+        "Your account has been successfully created. please press login!\n" +
+        "\n" +
+        "[BMc]")
     }
 
 
