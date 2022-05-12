@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {AppComponent} from "../app.component";
 
 @Component({
   selector: 'app-login-page',
@@ -18,6 +19,11 @@ export class LoginPageComponent implements OnInit {
   SUempty:boolean=false;
   SUfinal:boolean=false;
   SUrouter:string = "";
+
+  //Check if we are Login
+  static isLogIn:boolean = false;
+
+
 
   router:string = "";
   username:string="";
@@ -97,6 +103,7 @@ export class LoginPageComponent implements OnInit {
           console.log(this.check);
           if(localStorage.getItem(this.check)===this.password){
             this.isLogin=true;
+            localStorage.setItem("", "");
             this._router.navigate(['menu'])
           }
           else{
@@ -108,6 +115,9 @@ export class LoginPageComponent implements OnInit {
   async navigate() {
     await this._router.navigate(['/register']);
     console.log("hey");
+  }
+  check22(){
+    console.log(LoginPageComponent.isLogIn);
   }
 
 
