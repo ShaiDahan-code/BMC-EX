@@ -22,4 +22,8 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/login'])
 
   }
+  Move2(){
+    this.router.navigate(['/tasks'])
+
+  }
 }

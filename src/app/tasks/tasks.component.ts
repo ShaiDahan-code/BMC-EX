@@ -6,12 +6,14 @@ export class PeriodicElement2 {
   Description: string="";
   Run_Time : Date;
   status:string;
-  constructor(name: string, pos: number, des: string, run: Date, status: Status) {
+  extime:Date;
+  constructor(name: string, pos: number, des: string, run: Date, status: Status,extime:Date) {
     this.name=name;
     this.position=pos;
     this.Run_Time=run;
     this.status=status;
     this.Description=des;
+    this.extime=extime;
   }
 
 }
@@ -24,16 +26,8 @@ export enum Status{
 
 
 const ELEMENT_DATA: PeriodicElement2[] = [
-  {position: 1, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done},
-  {position: 2, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done},
-  {position: 3, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done},
-  {position: 4, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done},
-  {position: 5,name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done},
-  {position: 6, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done},
-  {position: 7, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done},
-  {position: 8, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done},
-  {position: 9, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done},
-  {position: 10, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done},
+  {position: 1, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done,extime: new Date()},
+
 ];
 
 @Component({
@@ -42,7 +36,7 @@ const ELEMENT_DATA: PeriodicElement2[] = [
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name','Description','Run_Time','status'];
+  displayedColumns: string[] = ['position', 'name','Description','Run_Time','status','extime'];
   dataSource = ELEMENT_DATA;
   constructor() { }
 

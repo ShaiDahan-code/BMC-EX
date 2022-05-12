@@ -9,11 +9,13 @@ import {MenuComponent} from "./menu/menu.component";
 import {Observable} from "rxjs";
 import {LoginPageGuard} from "./login-page.guard";
 import {MenuPageGuard} from "./menu-page.guard";
+import {TasksComponent} from "./tasks/tasks.component";
 
 const routes: Routes = [
   {path : 'login',canActivate: [MenuPageGuard] ,component:LoginPageComponent  },
   {path : 'register', component:RegisterComponent},
   {path:'menu',canActivate: [LoginPageGuard], component:MenuComponent},
+  {path:'tasks',canActivate: [LoginPageGuard], component:TasksComponent},
   {path:'',redirectTo:(localStorage.getItem(""))?'menu':'login',pathMatch:'full'}
 ]; // sets up routes constant where you define your routes
 

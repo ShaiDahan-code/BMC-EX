@@ -16,6 +16,7 @@ import { AlertComponent } from './alert/alert.component';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import { TasksComponent } from './tasks/tasks.component';
 import {MatTableModule} from "@angular/material/table";
+import { CollapseComponent } from './collapse/collapse.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {MatTableModule} from "@angular/material/table";
     NavbarComponent,
     MenuComponent,
     AlertComponent,
-    TasksComponent
+    TasksComponent,
+    CollapseComponent
   ],
   imports: [
     BrowserModule,
