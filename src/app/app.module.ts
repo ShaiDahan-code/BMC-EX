@@ -14,6 +14,8 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatIconModule} from "@angular/material/icon";
 import { AlertComponent } from './alert/alert.component';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
+import { TasksComponent } from './tasks/tasks.component';
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -22,19 +24,21 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
     RegisterComponent,
     NavbarComponent,
     MenuComponent,
-    AlertComponent
+    AlertComponent,
+    TasksComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        NgbModule,
-        FormsModule,
-        BrowserAnimationsModule,
-        MatTabsModule,
-        MatSelectModule,
-        MatIconModule,
-        MatProgressBarModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatSelectModule,
+    MatIconModule,
+    MatProgressBarModule,
+    MatTableModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
