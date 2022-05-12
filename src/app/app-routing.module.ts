@@ -8,7 +8,7 @@ import {AppComponent} from "./app.component";
 import {MenuComponent} from "./menu/menu.component";
 
 const routes: Routes = [
-  {path : 'login', component:LoginPageComponent},
+  {path : '', component:LoginPageComponent},
   {path : 'register', component:RegisterComponent},
   {path : 'menu', component:MenuComponent}
 ]; // sets up routes constant where you define your routes

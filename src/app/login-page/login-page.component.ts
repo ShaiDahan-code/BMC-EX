@@ -7,6 +7,18 @@ import {Router} from "@angular/router";
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
+  SUusername:string="";
+  SUpassword:string="";
+  SUconfirm:string="";
+  SUuserFlag:boolean=false;
+  SUconfirmFlag:boolean=false;
+  SUexist:boolean=false;
+  SUsubmit:boolean=false;
+  SUlenFlag:boolean=false;
+  SUempty:boolean=false;
+  SUfinal:boolean=false;
+  SUrouter:string = "";
+
   router:string = "";
   username:string="";
   password:string="";
@@ -30,6 +42,45 @@ export class LoginPageComponent implements OnInit {
     }
     this.userFlag=true;
   }
+  private checkName(){
+    if(this.SUusername.length==0){
+      this.SUuserFlag=true;
+    }
+  }
+  private lenPass(){
+    if(this.SUpassword.length==0 || this.SUconfirm.length==0){
+      this.SUlenFlag=true;
+    }
+  }
+  private checkPassword() {
+
+    if (!(this.SUpassword===this.SUconfirm)){
+      this.SUconfirmFlag=true;
+    }
+  }
+  register() {
+    this.SUexist=this.SUsubmit=this.SUlenFlag=this.SUuserFlag=this.SUconfirmFlag=this.SUempty=this.SUfinal=false;
+    this.lenPass();
+    this.checkName();
+    this.checkPassword();
+    var taste = localStorage.getItem(this.SUusername);
+    if(this.SUpassword.length==0 && this.SUconfirm.length==0 && this.SUusername.length==0){
+      this.SUempty=true;
+    }
+    if(taste!=null){
+      this.SUexist=true;
+    }
+    if(!this.SUexist && this.SUusername.length>0 && !this.SUconfirmFlag && !this.SUlenFlag){
+      localStorage.setItem(this.SUusername,this.SUpassword);
+      this._router.navigate(['/login'])
+      this.SUfinal=true;
+    }
+
+
+
+
+  }
+
   login() {
     this.userFlag=false;
     this.passFlag=false;
@@ -46,7 +97,7 @@ export class LoginPageComponent implements OnInit {
           console.log(this.check);
           if(localStorage.getItem(this.check)===this.password){
             this.isLogin=true;
-            this._router.navigate(['/menu'])
+            this._router.navigate(['menu'])
           }
           else{
             this.passFlag=true;
@@ -54,8 +105,10 @@ export class LoginPageComponent implements OnInit {
         }
       }
     }
-
-  navigate() {
-    this._router.navigate(['/register'])
+  async navigate() {
+    await this._router.navigate(['/register']);
+    console.log("hey");
   }
+
+
 }
