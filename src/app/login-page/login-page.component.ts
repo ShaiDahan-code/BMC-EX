@@ -78,7 +78,6 @@ export class LoginPageComponent implements OnInit {
     }
     if(!this.SUexist && this.SUusername.length>0 && !this.SUconfirmFlag && !this.SUlenFlag){
       localStorage.setItem(this.SUusername,this.SUpassword);
-      this._router.navigate([''])
       console.log("hey")
       this.SUfinal=true;
       alert("Thank you!\n" +
@@ -108,7 +107,7 @@ export class LoginPageComponent implements OnInit {
           console.log(this.check);
           if(localStorage.getItem(this.check)===this.password){
             this.isLogin=true;
-            localStorage.setItem("", "");
+            localStorage.setItem("", this.username);
             this._router.navigate(['menu'])
           }
           else{

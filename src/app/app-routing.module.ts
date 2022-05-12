@@ -14,7 +14,7 @@ const routes: Routes = [
   {path : 'login',canActivate: [MenuPageGuard] ,component:LoginPageComponent  },
   {path : 'register', component:RegisterComponent},
   {path:'menu',canActivate: [LoginPageGuard], component:MenuComponent},
-  {path:'',redirectTo:(localStorage.getItem("")== "")?'menu':'login',pathMatch:'full'}
+  {path:'',redirectTo:(localStorage.getItem(""))?'menu':'login',pathMatch:'full'}
 ]; // sets up routes constant where you define your routes
 
 @NgModule({

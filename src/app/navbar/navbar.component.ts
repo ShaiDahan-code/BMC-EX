@@ -9,6 +9,7 @@ import {LoginPageComponent} from "../login-page/login-page.component";
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  user=localStorage.getItem("")
   _router:string="";
   constructor(private router : Router) {
     this._router = router.url;

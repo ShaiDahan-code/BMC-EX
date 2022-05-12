@@ -17,7 +17,7 @@ export class LoginPageGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     var us = localStorage.getItem("");
     console.log(us);
-    if(us == ""){
+    if(us){
       return true;
     }
     else {
