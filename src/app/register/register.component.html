@@ -10,6 +10,11 @@
   <section id="content">
     <form action="">
       <h1>Register</h1>
+      <p *ngIf="submit">
+        <ngb-alert [dismissible]="false">
+           You register successfully, please login.
+        </ngb-alert>
+      </p>
       <p [ngStyle]="{color: 'red'}" class="alert alert-danger mt-3 mb-0" *ngIf="userFlag">*ERROR* : The Name is empty. </p>
       <p [ngStyle]="{color: 'red'}" class="alert alert-danger mt-3 mb-0" *ngIf="lenFlag">*One of the passwords is empty,try again. </p>
       <p [ngStyle]="{color: 'red'}" class="alert alert-danger mt-3 mb-0" *ngIf="confirmFlag">*Passwords are not equal* </p>
@@ -29,7 +34,7 @@
         <input type="password" placeholder="confirm Password" required="true" id="confirm_password" [(ngModel)]="confirm" name="confirm"/>
       </div>
       <div>
-        <button type="button" class="btn btn-outline-success" (click)="register()">Register</button>
+        <button type="button" class="btn btn-secondary" (click)="register()">Register</button>
       </div>
     </form><!-- form -->
 

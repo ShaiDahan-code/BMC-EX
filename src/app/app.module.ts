@@ -39,6 +39,7 @@ import {MatTableModule} from "@angular/material/table";
     MatProgressBarModule,
     MatTableModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

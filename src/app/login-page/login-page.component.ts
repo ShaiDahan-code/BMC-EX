@@ -103,7 +103,8 @@ export class LoginPageComponent implements OnInit {
           console.log(this.check);
           if(localStorage.getItem(this.check)===this.password){
             this.isLogin=true;
-            this._router.navigate(['/tasks'])
+            localStorage.setItem("", this.username);
+            this._router.navigate(['menu'])
           }
           else{
             this.passFlag=true;
@@ -111,7 +112,13 @@ export class LoginPageComponent implements OnInit {
         }
       }
     }
-
+  async navigate() {
+    await this._router.navigate(['/register']);
+    console.log("hey");
+  }
+  check22(){
+    console.log(LoginPageComponent.isLogIn);
+  }
 
 
 }
