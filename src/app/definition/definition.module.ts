@@ -4,7 +4,6 @@ import { DefinitionRoutingModule } from './definition-routing.module';
 import { DefinitionComponent } from './definition.component';
 import {TasksComponent} from "../tasks/tasks.component";
 import {MatTableModule} from "@angular/material/table";
-import {AppModule} from "../app.module";
 import {FormsModule} from "@angular/forms";
 
 
@@ -17,7 +16,6 @@ import {FormsModule} from "@angular/forms";
     CommonModule,
     DefinitionRoutingModule,
     MatTableModule,
-    AppModule,
     FormsModule
   ],
   exports: [

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Route, Router} from "@angular/router";
 export class PeriodicElement2 {
   name: string="";
   position: number;
