@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NavbarComponent} from "./navbar/navbar.component";
 import { MenuComponent } from './menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,10 +13,9 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatIconModule} from "@angular/material/icon";
 import { AlertComponent } from './alert/alert.component';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
-import { TasksComponent } from './tasks/tasks.component';
 import {MatTableModule} from "@angular/material/table";
 import { CollapseComponent } from './collapse/collapse.component';
-import {DefinitionModule} from "./definition/definition.module";
+import {MatStepperModule} from "@angular/material/stepper";
 
 @NgModule({
   declarations: [
@@ -25,7 +24,6 @@ import {DefinitionModule} from "./definition/definition.module";
     NavbarComponent,
     MenuComponent,
     AlertComponent,
-    TasksComponent,
     CollapseComponent
   ],
   imports: [
@@ -38,13 +36,14 @@ import {DefinitionModule} from "./definition/definition.module";
     MatSelectModule,
     MatIconModule,
     MatProgressBarModule,
-    MatTableModule,
-
+    MatStepperModule,
+    ReactiveFormsModule,
   ],
 
   providers: [],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+    MatTableModule
   ],
   bootstrap: [AppComponent]
 })

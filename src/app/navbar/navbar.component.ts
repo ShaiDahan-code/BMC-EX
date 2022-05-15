@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {AppComponent} from "../app.component";
-import {LoginPageComponent} from "../login-page/login-page.component";
+
 
 @Component({
   selector: 'app-navbar',
@@ -23,7 +22,7 @@ export class NavbarComponent implements OnInit {
 
   }
   Move2(){
-    this.router.navigate(['/tasks'])
+    this.router.navigate(['definition/tasks'])
 
   }
 }

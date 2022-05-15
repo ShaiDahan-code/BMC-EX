@@ -4,8 +4,9 @@ import { DefinitionComponent } from './definition.component';
 import {TasksComponent} from "../tasks/tasks.component";
 
 
-const routes: Routes = [{ path: '', component: DefinitionComponent },
-                       { path: 'task', component: TasksComponent } ];
+const routes: Routes = [
+  { path: '', component: DefinitionComponent},
+  { path: 'tasks', component: TasksComponent}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

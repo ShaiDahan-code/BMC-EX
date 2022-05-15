@@ -1,7 +1,6 @@
 
 import {Component, OnInit, VERSION} from '@angular/core';
 import {Router} from "@angular/router";
-import {AppModule} from "./app.module";
 
 
 @Component({

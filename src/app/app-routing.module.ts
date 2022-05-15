@@ -14,7 +14,6 @@ import {DefinitionModule} from "./definition/definition.module";
 const routes: Routes = [
   {path : 'login',canActivate: [MenuPageGuard] ,component:LoginPageComponent  },
   {path:'home',canActivate: [LoginPageGuard], component:MenuComponent},
-  {path:'tasks',canActivate: [LoginPageGuard], component:TasksComponent},
   {path:'',redirectTo:(localStorage.getItem(""))?'home':'login',pathMatch:'full'},
   /*new lazy loading*/
   {
