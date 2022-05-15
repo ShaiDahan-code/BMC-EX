@@ -5,6 +5,7 @@ import { DefinitionComponent } from './definition.component';
 import {TasksComponent} from "../tasks/tasks.component";
 import {MatTableModule} from "@angular/material/table";
 import {AppModule} from "../app.module";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {AppModule} from "../app.module";
     CommonModule,
     DefinitionRoutingModule,
     MatTableModule,
-    AppModule
+    AppModule,
+    FormsModule
   ],
   exports: [
     TasksComponent

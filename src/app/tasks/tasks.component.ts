@@ -15,7 +15,6 @@ export class PeriodicElement2 {
     this.Description=des;
     this.extime=extime;
   }
-
 }
 
 export enum Status{
@@ -27,7 +26,6 @@ export enum Status{
 
 const ELEMENT_DATA: PeriodicElement2[] = [
   {position: 1, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done,extime: new Date()},
-
 ];
 
 @Component({
