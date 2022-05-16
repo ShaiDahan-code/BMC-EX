@@ -44,7 +44,8 @@ import {MatStepperModule} from "@angular/material/stepper";
 
   providers: [],
   exports: [
-    MatTableModule
+    MatTableModule,
+    NewTaskComponent
   ],
   bootstrap: [AppComponent]
 })

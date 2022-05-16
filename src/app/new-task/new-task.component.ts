@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
+import {PeriodicElement2} from "../tasks/tasks.component";
 
 @Component({
   selector: 'app-new-task',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-task.component.css']
 })
 export class NewTaskComponent implements OnInit {
+  @Input() toadd:PeriodicElement2=new PeriodicElement2();
+  @Output() taskChange:EventEmitter<PeriodicElement2>=new EventEmitter<PeriodicElement2>();
 
 
   task_name= "";
@@ -34,6 +37,9 @@ export class NewTaskComponent implements OnInit {
     this.description = "";
     this.status = "";
 
+  }
+  update(){
+    this.taskChange.emit(this.toadd);
   }
 
 }

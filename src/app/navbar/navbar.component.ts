@@ -22,6 +22,7 @@ export class NavbarComponent implements OnInit {
 
   }
   Move2(){
+    console.log("assss")
     this.router.navigate(['/home/definition/tasks'])
   }
   Move3(){
