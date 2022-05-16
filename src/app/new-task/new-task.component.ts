@@ -8,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class NewTaskComponent implements OnInit {
 
 
-  name = "";
-  run_time = "";
   task_name= "";
+  run_time = "";
   description = "";
   status = "";
+  date:Date = new Date();
+
 
   constructor() { }
 
@@ -20,7 +21,7 @@ export class NewTaskComponent implements OnInit {
   }
   SubmitNewTask(){
     //create a new array from the form and save it to local storage
-    let newTask = [this.name, this.run_time, this.task_name, this.description, this.status];
+    let newTask = [this.task_name, this.description,this.run_time, this.status];
     // @ts-ignore
     let tasks = JSON.parse(localStorage.getItem("tasks"));
     if(tasks == null){
@@ -28,7 +29,6 @@ export class NewTaskComponent implements OnInit {
     }
     tasks.push(newTask);
     localStorage.setItem("tasks", JSON.stringify(tasks));
-    this.name = "";
     this.run_time = "";
     this.task_name = "";
     this.description = "";

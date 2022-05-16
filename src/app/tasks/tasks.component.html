@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 
-<button (click)="AddNewTask()">Plus</button>
+
 
 <!--<table  mat-table [dataSource]="dataSource" class="mat-elevation-z8">-->
 
@@ -106,18 +106,17 @@
     <th scope="col">Description</th>
     <th scope="col">Run Time</th>
     <th scope="col">Status</th>
-    <th scope="col"></th>
+    <th scope="col">Edit</th>
+
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let element of this.lstTask; let indexOfelement=index">
-    <th scope="row">{{indexOfelement+1}}</th>
-    <td>{{element}}</td>
-    <td>{{element}}</td>
-    <td>{{element}}</td>
-    <td>{{element}}</td>
-<!--    <td><button class="btn btn-danger" (click)="cancelBooking(indexOfelement)">Cancel</button></td>-->
+  <tr *ngFor="let element of this.lstTask;let indexOfElement = index ">
+    <th scope="row">{{indexOfElement+1}}</th>
+      <td *ngFor=" let x of element">{{x}}</td>
+    <button (click) = "edit(indexOfElement)"> Edit</button>
   </tr>
 
   </tbody>
+
 </table>

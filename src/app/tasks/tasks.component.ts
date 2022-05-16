@@ -42,22 +42,21 @@ export class TasksComponent implements OnInit {
   check:boolean=false;
   i:number=0;
   // dataSource = ELEMENT_DATA;
-  lstTask = localStorage.getItem("tasks");
+  lstTask: any = localStorage.getItem('tasks');
+  flag: boolean=true;
 
 
 
-  constructor() { }
+
+
+  constructor() {
+    this.lstTask = JSON.parse(this.lstTask)
+  }
 
   ngOnInit(): void {
   }
 
-  AddNewTask(){
-    if(this.check==false){
-      this.check=true;
-    }
-    else{
-      this.check=false;
-    }
-  }
+  edit(indexOfElement: number):  void{
 
+  }
 }
