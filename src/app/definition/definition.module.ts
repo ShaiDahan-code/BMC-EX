@@ -5,6 +5,16 @@ import { DefinitionComponent } from './definition.component';
 import {TasksComponent} from "../tasks/tasks.component";
 import {MatTableModule} from "@angular/material/table";
 import {FormsModule} from "@angular/forms";
+import {HomeModule} from "../home/home.module";
+import {MatIconModule} from "@angular/material/icon";
+
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatSelectModule} from "@angular/material/select";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatStepperModule} from "@angular/material/stepper";
+
+
 
 
 @NgModule({
@@ -16,7 +26,14 @@ import {FormsModule} from "@angular/forms";
     CommonModule,
     DefinitionRoutingModule,
     MatTableModule,
-    FormsModule
+    FormsModule,
+    HomeModule,
+    MatIconModule,
+    MatTabsModule,
+    MatSelectModule,
+    NgbModule,
+    MatProgressBarModule,
+    MatStepperModule
   ],
   exports: [
     TasksComponent

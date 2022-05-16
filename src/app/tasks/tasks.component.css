@@ -2,3 +2,9 @@ table {
   width: 100%;
 
 }
+.row-even {
+  background-color:#333333;
+}
+.row-odd {
+  background-color:#BDE3FB;
+}

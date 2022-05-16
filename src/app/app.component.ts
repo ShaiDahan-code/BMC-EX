@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   title = 'BMC-EX';
   router: string;
   static n = 0;
-
+  isLogin: boolean = localStorage.getItem("") != null;
   constructor(private _router: Router){
 
     this.router = _router.url;
@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.isLogin = localStorage.getItem("") != null;
     console.log("I Restart!!!");
     console.log(AppComponent.n);
     AppComponent.n += 1;

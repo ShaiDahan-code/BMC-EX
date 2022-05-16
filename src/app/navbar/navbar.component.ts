@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
 
   }
   Move2(){
-    this.router.navigate(['definition/tasks'])
+    this.router.navigate(['/home/definition/tasks'])
 
   }
 }

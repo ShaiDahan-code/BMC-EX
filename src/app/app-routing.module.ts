@@ -8,13 +8,11 @@ import {MenuPageGuard} from "./menu-page.guard";
 
 const routes: Routes = [
   {path : 'login',canActivate: [MenuPageGuard] ,component:LoginPageComponent  },
-  {path:'home',canActivate: [LoginPageGuard], component:MenuComponent},
+  //{path:'home',canActivate: [LoginPageGuard], component:MenuComponent},
   {path:'',redirectTo:(localStorage.getItem(""))?'home':'login',pathMatch:'full'},
   /*new lazy loading*/
-  {
-    path: 'definition', loadChildren: () => import('./definition/definition.module').then(m => m.DefinitionModule)
-  },
-  { path: 'Monitoring', loadChildren: () => import('./monitoring/monitoring.module').then(m => m.MonitoringModule) }
+
+  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule), canActivate: [LoginPageGuard] }
 ]; // sets up routes constant where you define your routes
 
 @NgModule({

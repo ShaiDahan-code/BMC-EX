@@ -283,7 +283,17 @@ a:hover {
   color: black;
 }
 
+
+
 a.active {
   background-color: #04AA6D;
   color: white;
+}
+
+.logo-image2{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -1px;
 }

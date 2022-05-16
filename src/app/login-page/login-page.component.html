@@ -44,16 +44,19 @@
         <! ----------- SIGN UO FORM----------- -->
         <div class="sign-up-htm" style="justify-content: center">
           <div class="group">
-            <p [ngStyle]="{color: 'red'}" class="alert alert-danger mt-3 mb-0" *ngIf="userFlag">*ERROR* : The Name is empty. </p>
+
+            <p [ngStyle]="{color: 'red'}" class="alert alert-danger mt-3 mb-0" role="alert" *ngIf="userFlag">*ERROR* : The Name is empty. </p>
             <p [ngStyle]="{color: 'red'}" class="alert alert-danger mt-3 mb-0" *ngIf="SUlenFlag">*One of the passwords is empty,try again. </p>
             <p [ngStyle]="{color: 'red'}" class="alert alert-danger mt-3 mb-0" *ngIf="SUconfirmFlag">*Passwords are not equal* </p>
-            <p [ngStyle]="{color: 'red'}" class="alert alert-danger mt-3 mb-0" *ngIf="SUempty">*ERROR*,try again </p>
+            <p [ngStyle]="{color: 'red'}" class="alert alert-danger mt-3 mb-0" role="alert" *ngIf="SUempty">*ERROR*,try again </p>
             <p [ngStyle]="{color: 'red'}" class="alert alert-danger mt-3 mb-0" *ngIf="SUexist">*ERROR* : This user name already exist, try to login </p>
             <p [ngStyle]="{color: 'green'}" class="alert alert-danger mt-3 mb-0" *ngIf="SUsubmit">You register successfully, please login </p>
+          </div>
+            <div class="group">
             <label for="user" class="label">Username</label>
             <input  id="user" type="text" class="input" [(ngModel)]="SUusername" name="name" placeholder="Username">
-
           </div>
+
           <div class="group">
             <label  class="label">Password</label>
             <input placeholder="Password" required="true"  type="password" class="input" data-type="password" id="signuppassword"  [(ngModel)]="SUpassword" name="password">

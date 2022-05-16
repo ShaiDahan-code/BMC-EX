@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+
+
 export class PeriodicElement2 {
   name: string="";
   position: number;
@@ -6,6 +8,7 @@ export class PeriodicElement2 {
   Run_Time : Date;
   status:string;
   extime:Date;
+
   constructor(name: string, pos: number, des: string, run: Date, status: Status,extime:Date) {
     this.name=name;
     this.position=pos;
@@ -20,12 +23,15 @@ export enum Status{
   NotStart='Not started',
   InProgress='In progress',
   Done='Done'
+
 }
 
 
 const ELEMENT_DATA: PeriodicElement2[] = [
   {position: 1, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done,extime: new Date()},
+  {position: 2, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done,extime: new Date()}
 ];
+localStorage.setItem("tasks",JSON.stringify(ELEMENT_DATA));
 
 @Component({
   selector: 'app-tasks',
@@ -34,10 +40,21 @@ const ELEMENT_DATA: PeriodicElement2[] = [
 })
 export class TasksComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name','Description','Run_Time','status','extime'];
+  check:boolean=false;
+  i:number=0;
   dataSource = ELEMENT_DATA;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  AddNewTask(){
+    if(this.check==false){
+      this.check=true;
+    }
+    else{
+      this.check=false;
+    }
   }
 
 }

@@ -5,7 +5,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {NavbarComponent} from "./navbar/navbar.component";
+
 import { MenuComponent } from './menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTabsModule} from "@angular/material/tabs";
@@ -21,7 +21,7 @@ import {MatStepperModule} from "@angular/material/stepper";
   declarations: [
     AppComponent,
     LoginPageComponent,
-    NavbarComponent,
+
     MenuComponent,
     AlertComponent,
     CollapseComponent
@@ -42,7 +42,6 @@ import {MatStepperModule} from "@angular/material/stepper";
 
   providers: [],
   exports: [
-    NavbarComponent,
     MatTableModule
   ],
   bootstrap: [AppComponent]
