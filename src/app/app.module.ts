@@ -16,6 +16,7 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatTableModule} from "@angular/material/table";
 import { CollapseComponent } from './collapse/collapse.component';
 import {MatStepperModule} from "@angular/material/stepper";
+import { NewTaskComponent } from './new-task/new-task.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {MatStepperModule} from "@angular/material/stepper";
 
     MenuComponent,
     AlertComponent,
-    CollapseComponent
+    CollapseComponent,
+    NewTaskComponent
   ],
   imports: [
     BrowserModule,
