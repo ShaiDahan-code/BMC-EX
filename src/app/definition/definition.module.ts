@@ -13,6 +13,7 @@ import {MatSelectModule} from "@angular/material/select";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatStepperModule} from "@angular/material/stepper";
+import {NewTaskComponent} from "../new-task/new-task.component";
 
 
 
@@ -20,7 +21,8 @@ import {MatStepperModule} from "@angular/material/stepper";
 @NgModule({
   declarations: [
     DefinitionComponent,
-    TasksComponent
+    TasksComponent,
+    NewTaskComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import {MatStepperModule} from "@angular/material/stepper";
     MatStepperModule
   ],
   exports: [
-    TasksComponent
+    TasksComponent,
+    NewTaskComponent
   ]
 })
 

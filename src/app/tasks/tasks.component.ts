@@ -27,11 +27,10 @@ export enum Status{
 }
 
 
-const ELEMENT_DATA: PeriodicElement2[] = [
-  {position: 1, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done,extime: new Date()},
-  {position: 2, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done,extime: new Date()}
-];
-localStorage.setItem("tasks",JSON.stringify(ELEMENT_DATA));
+// const ELEMENT_DATA: PeriodicElement2[] = [
+//   {position: 1, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done,extime: new Date()},
+//   {position: 2, name: 'Hydrogen', Description: '1.0079', Run_Time: new Date(),status:Status.Done,extime: new Date()}
+// ];
 
 @Component({
   selector: 'app-tasks',
@@ -42,7 +41,11 @@ export class TasksComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name','Description','Run_Time','status','extime'];
   check:boolean=false;
   i:number=0;
-  dataSource = ELEMENT_DATA;
+  // dataSource = ELEMENT_DATA;
+  lstTask = localStorage.getItem("tasks");
+
+
+
   constructor() { }
 
   ngOnInit(): void {

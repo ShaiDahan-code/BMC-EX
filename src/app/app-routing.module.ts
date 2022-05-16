@@ -8,8 +8,8 @@ import {MenuPageGuard} from "./menu-page.guard";
 
 const routes: Routes = [
   {path : 'login',canActivate: [MenuPageGuard] ,component:LoginPageComponent  },
-  //{path:'home',canActivate: [LoginPageGuard], component:MenuComponent},
   {path:'',redirectTo:(localStorage.getItem(""))?'home':'login',pathMatch:'full'},
+
   /*new lazy loading*/
 
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule), canActivate: [LoginPageGuard] }

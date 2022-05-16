@@ -1,1 +1,78 @@
-<p>new-task works!</p>
+<app-navbar></app-navbar>
+<br><br><br>
+
+
+
+
+<!--create a box for get name and date from user-->
+<div class="container" id="testBox">
+  <div class="row">
+    <div class="col-xs-5">
+
+
+      <div class="form-group">
+        <input type="text" class="form-control" id="name" placeholder="Name" [(ngModel)]="name">
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-5">
+
+
+      <div class="form-group">
+        <input type="text" class="form-control" id="task_name" placeholder="Task name" [(ngModel)]="task_name">
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-5">
+
+
+
+  <div class="row">
+    <div class="col-xs-5">
+
+
+      <div class="form-group">
+        <input type="text" class="form-control" id="description" placeholder="Description" [(ngModel)]="description">
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-5">
+
+
+      <div class="row">
+        <div class="col-xs-5">
+          <div class="form-group">
+            <input type="date" class="form-control" id="run_time" placeholder="Run Time" [(ngModel)]="run_time">
+            <br>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+  <div class="row">
+    <div class="col-xs-5">
+      <div class="form-group">
+        <input type="text" class="form-control" id="status" placeholder="Status" [(ngModel)]="status">
+        <br>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!--  add a button to submit the name and date-->
+  <button mat-raised-button class="btn btn-success" (click)="SubmitNewTask()">Submit</button>
+</div>

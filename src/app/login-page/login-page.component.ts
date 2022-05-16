@@ -103,6 +103,7 @@ export class LoginPageComponent implements OnInit {
           if(localStorage.getItem(this.check)===this.password){
             this.isLogin=true;
             localStorage.setItem("", this.username);
+            localStorage.setItem("tasks",'[]');
             this._router.navigate(['home'])
           }
           else{
