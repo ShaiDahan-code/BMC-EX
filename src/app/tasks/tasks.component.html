@@ -111,8 +111,28 @@
       <td *ngFor=" let x of element">{{x}}</td>
     <ngbd-offcanvas-component [lst]= 'element'> </ngbd-offcanvas-component>
     <button (click) = "edit(indexOfElement)"> Edit</button>
+    <button (click) = "delTask(indexOfElement)"> Delete Task</button>
   </tr>
 
   </tbody>
 
 </table>
+
+<ng-container *ngIf="flag2">
+<p>EDIT TASK NUMBER {{this.indextoedit+1}}</p>
+<tr *ngFor="let element of this.lstTask;let indexOfElement = index ">
+  <div *ngIf="indexOfElement===indextoedit">
+  <p>Name        : <input [(ngModel)]="TaskToEdit.name"></p>
+  <p>Description : <input [(ngModel)]="TaskToEdit.Description"></p>
+  <p>Execution Time: <input type="date" class="form-control" id="run_time" placeholder="Run Time" [(ngModel)]="TaskToEdit.extime"></p>
+  <p>Status      : <input [(ngModel)]="TaskToEdit.status"></p>
+
+    <button (click)="update()">Update</button>
+
+  </div>
+</tr>
+</ng-container>
+
+
+
+

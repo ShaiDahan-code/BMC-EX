@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#">
+      <div class="logo-image">
+        <br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/BMC_Software_logo_%282014%29.svg/1280px-BMC_Software_logo_%282014%29.svg.png" class="img-fluid"
+        >
+      </div>
+
+    </a>
+
+    <a class="navbar-brand" href="#"> Control-M | </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li ngbDropdown class="nav-item">
+          <a href (click)="false" class="nav-link" ngbDropdownToggle>Definition</a>
+          <div ngbDropdownMenu>
+            <br>
+            <button (click)="Move2()" ngbDropdownItem>Tasks</button>
+            <button (click)="Move3()" ngbDropdownItem>New Tasks</button>
+            <div class="dropdown-divider"></div>
+
+          </div>
+        </li>
+        <li ngbDropdown class="nav-item">
+          <a href (click)="false" class="nav-link" ngbDropdownToggle>Monitoring</a>
+          <div ngbDropdownMenu>
+            <br>
+            <button ngbDropdownItem>Action</button>
+            <button ngbDropdownItem>Another action</button>
+            <button ngbDropdownItem>Something else here</button>
+            <div class="dropdown-divider"></div>
+            <button ngbDropdownItem>Separated link</button>
+          </div>
+        </li>
+
+
+
+
+
+
+      </ul>
+
+      <form class="d-flex">
+        <div class="logo-image2">
+          <img src="https://e7.pngegg.com/pngimages/85/114/png-clipart-avatar-user-profile-male-logo-profile-icon-hand-monochrome.png" class="img-fluid">
+        </div>
+        <li ngbDropdown class="nav-item">
+          <a href (click)="false" class="nav-link" ngbDropdownToggle>{{user}}</a>
+          <div ngbDropdownMenu>
+            <br>
+            <button ngbDropdownItem (click)="move()">Logout</button>
+          </div>
+        </li>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!--show routerLink-->
+<router-outlet></router-outlet>
