@@ -2,6 +2,7 @@
 
 
 
+
 <!--<table  mat-table [dataSource]="dataSource" class="mat-elevation-z8">-->
 
 <!--  &lt;!&ndash;- Note that these columns can be defined in any order.-->
@@ -114,6 +115,7 @@
   <tr *ngFor="let element of this.lstTask;let indexOfElement = index ">
     <th scope="row">{{indexOfElement+1}}</th>
       <td *ngFor=" let x of element">{{x}}</td>
+    <ngbd-offcanvas-component></ngbd-offcanvas-component>
     <button (click) = "edit(indexOfElement)"> Edit</button>
   </tr>
 

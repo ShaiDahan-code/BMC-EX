@@ -14,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatStepperModule} from "@angular/material/stepper";
 import {NewTaskComponent} from "../new-task/new-task.component";
+import {NgbdOffcanvasComponent, NgbdOffcanvasContent} from './offcanvas-focus/offcanvas-focus.component';
 
 
 
@@ -23,7 +24,9 @@ import {NewTaskComponent} from "../new-task/new-task.component";
   declarations: [
     DefinitionComponent,
     TasksComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    NgbdOffcanvasComponent,
+    NgbdOffcanvasContent
   ],
   imports: [
     CommonModule,
@@ -40,7 +43,9 @@ import {NewTaskComponent} from "../new-task/new-task.component";
   ],
   exports: [
     TasksComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    NgbdOffcanvasComponent,
+    NgbdOffcanvasContent
   ]
 })
 
