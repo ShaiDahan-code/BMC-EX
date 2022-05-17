@@ -38,7 +38,8 @@ export enum Status{
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name','Description','Run_Time','status','extime'];
+  displayedColumns: string[] = [ '#', 'name','Description','Run_Time','status'];
+  Columns: string[] = ['position', 'name','Description','Run_Time','status','extime'];
   check:boolean=false;
   i:number=0;
   // dataSource = ELEMENT_DATA;
@@ -59,4 +60,6 @@ export class TasksComponent implements OnInit {
   edit(indexOfElement: number):  void{
 
   }
+
+
 }
