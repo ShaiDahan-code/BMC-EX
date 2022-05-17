@@ -101,21 +101,15 @@
 
 <table class="table" >
   <thead class="thead-dark">
-  <tr>
-    <th scope="col">#</th>
-    <th scope="col">Task Name</th>
-    <th scope="col">Description</th>
-    <th scope="col">Run Time</th>
-    <th scope="col">Status</th>
-    <th scope="col">Edit</th>
-
+  <tr >
+    <th *ngFor="let title of this.displayedColumns" scope="col">{{title}}</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let element of this.lstTask;let indexOfElement = index ">
     <th scope="row">{{indexOfElement+1}}</th>
       <td *ngFor=" let x of element">{{x}}</td>
-    <ngbd-offcanvas-component></ngbd-offcanvas-component>
+    <ngbd-offcanvas-component [lst]= 'element'> </ngbd-offcanvas-component>
     <button (click) = "edit(indexOfElement)"> Edit</button>
   </tr>
 
