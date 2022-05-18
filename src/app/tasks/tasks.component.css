@@ -8,3 +8,37 @@ table {
 .row-odd {
   background-color:#BDE3FB;
 }
+.cardcontainer1 {
+  max-width: 400px;
+  border-radius:8% ;
+  margin: auto;
+  width: 60%;
+  border: black;
+  padding: 10px;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,151,0,1) 100%);
+}
+.cardcontainer2 {
+  max-width: 400px;
+  border-radius:8% ;
+  margin: auto;
+  width: 60%;
+  border: black;
+  padding: 10px;
+
+}
+.cardcontainer3 {
+  max-width: 400px;
+  border-radius:8% ;
+  margin: auto;
+  width: 60%;
+  border: black;
+  padding: 10px;
+
+}
+
+.example-header-image {
+  background-image: url('https://www.kindpng.com/picc/m/79-793180_edit-round-icon-png-png-download-round-edit.png');
+  background-size: cover;
+
+}

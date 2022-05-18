@@ -109,28 +109,48 @@
   <tr *ngFor="let element of this.lstTask;let indexOfElement = index ">
     <th scope="row">{{indexOfElement+1}}</th>
       <td *ngFor=" let x of element">{{x}}</td>
+    <!-- testing-->
+
     <ngbd-offcanvas-component [lst]= 'element'> </ngbd-offcanvas-component>
-    <button (click) = "edit(indexOfElement)"> Edit</button>
+     <button (click) = "edit(indexOfElement)"> Edit</button>
     <button (click) = "delTask(indexOfElement)"> Delete Task</button>
   </tr>
 
   </tbody>
 
 </table>
+<br><br>
+<ng-container *ngIf="flag2" class="example-card">
 
-<ng-container *ngIf="flag2">
-<p>EDIT TASK NUMBER {{this.indextoedit+1}}</p>
-<tr *ngFor="let element of this.lstTask;let indexOfElement = index ">
-  <div *ngIf="indexOfElement===indextoedit">
-  <p>Name        : <input [(ngModel)]="TaskToEdit.name"></p>
-  <p>Description : <input [(ngModel)]="TaskToEdit.Description"></p>
-  <p>Execution Time: <input type="date" class="form-control" id="run_time" placeholder="Run Time" [(ngModel)]="TaskToEdit.extime"></p>
-  <p>Status      : <input [(ngModel)]="TaskToEdit.status"></p>
+  <mat-card class="cardcontainer1" >
+    <mat-card-header >
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Edit Task</mat-card-title>
+      <mat-card-subtitle>editing Task number {{this.indextoedit+1}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="cardcontainer2 text-xl-center">
 
-    <button (click)="update()">Update</button>
+      <tr *ngFor="let element of this.lstTask;let indexOfElement = index ">
+        <div *ngIf="indexOfElement===indextoedit">
+          <p>Name        : <input placeholder="Name" [(ngModel)]="TaskToEdit.name"></p>
+          <br>
+          <p>Description : <input [(ngModel)]="TaskToEdit.Description"></p>
+          <br>
+          <p>Execution Time: <input type="date" class="form-control" id="run_time" placeholder="Run Time" [(ngModel)]="TaskToEdit.extime"></p>
+          <br>
+          <p>Status      : <input [(ngModel)]="TaskToEdit.status"></p>
 
-  </div>
-</tr>
+        </div>
+      </tr>
+    </mat-card-content>
+    <mat-card-actions class="cardcontainer2 text-xl-center" >
+      <button (click)="update()" class="btn-dark">Update</button>
+
+    </mat-card-actions>
+    <mat-progress-bar  mode="indeterminate"></mat-progress-bar>
+  </mat-card>
+
+
 </ng-container>
 
 

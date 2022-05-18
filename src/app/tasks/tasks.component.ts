@@ -8,7 +8,6 @@ export class PeriodicElement2 {
   Run_Time : Date;
   status:string;
   extime:Date;
-
   constructor(name: string="", pos: number=0, des: string="", run: Date=new Date(), status: Status=Status.NotStart,extime:Date=new Date()) {
     this.name=name;
     this.position=pos;
@@ -49,6 +48,7 @@ export class TasksComponent implements OnInit {
   indextoedit: number = 0;
   TaskToEdit: PeriodicElement2 = new PeriodicElement2();
   TaskToDel: PeriodicElement2 = new PeriodicElement2();
+
 
 
 

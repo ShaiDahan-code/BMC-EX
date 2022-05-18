@@ -14,7 +14,6 @@ import {MatIconModule} from "@angular/material/icon";
 import { AlertComponent } from './alert/alert.component';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatTableModule} from "@angular/material/table";
-import { CollapseComponent } from './collapse/collapse.component';
 import {MatStepperModule} from "@angular/material/stepper";
 
 
@@ -24,8 +23,7 @@ import {MatStepperModule} from "@angular/material/stepper";
     LoginPageComponent,
 
     MenuComponent,
-    AlertComponent,
-    CollapseComponent,
+    AlertComponent
 
   ],
   imports: [
