@@ -109,10 +109,8 @@
   <tr *ngFor="let element of this.lstTask;let indexOfElement = index ">
     <th scope="row">{{indexOfElement+1}}</th>
       <td *ngFor=" let x of element">{{x}}</td>
-    <!-- testing-->
-
-    <ngbd-offcanvas-component [lst]= 'element'> </ngbd-offcanvas-component>
-     <button (click) = "edit(indexOfElement)"> Edit</button>
+    <ngbd-offcanvas-component [lst]= 'element' [clm]="Columns"> </ngbd-offcanvas-component>
+    <button (click) = "edit(indexOfElement)"> Edit</button>
     <button (click) = "delTask(indexOfElement)"> Delete Task</button>
   </tr>
 

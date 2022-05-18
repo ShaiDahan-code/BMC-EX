@@ -6,7 +6,7 @@ import { HomeComponent } from './home.component';
 import {NavbarComponent} from "../navbar/navbar.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {PopoverComponent} from "../popover/popover.component";
+
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatSelectModule} from "@angular/material/select";
 import {MatIconModule} from "@angular/material/icon";
@@ -19,7 +19,7 @@ import {MatStepperModule} from "@angular/material/stepper";
   declarations: [
     HomeComponent,
     NavbarComponent,
-    PopoverComponent
+
   ],
   imports: [
     CommonModule,
@@ -37,7 +37,6 @@ import {MatStepperModule} from "@angular/material/stepper";
   ],
   exports: [
     NavbarComponent,
-    PopoverComponent
   ]
 })
 export class HomeModule { }

@@ -11,13 +11,14 @@ import {TasksComponent} from "../../tasks/tasks.component";
     </div>
     <div class="offcanvas-body">
       <div *ngFor = "let detail of taskDetails">
-        {{ detail }}
+        {{dispclm[taskDetails.indexOf(detail)+1]}} :  {{ detail }}
       </div>
     </div>
   `
 })
 export class NgbdOffcanvasContent {
   @Input() taskDetails: string= '';
+  @Input() dispclm :any;
 
   constructor(public activeOffcanvas: NgbActiveOffcanvas) {
   }
@@ -29,11 +30,13 @@ export class NgbdOffcanvasContent {
 )
 export class NgbdOffcanvasComponent {
   @Input() lst: any;
+  @Input() clm: any;
   constructor(private offcanvasService: NgbOffcanvas) {}
 
   open() {
     const offcanvasRef = this.offcanvasService.open(NgbdOffcanvasContent);
     offcanvasRef.componentInstance.taskDetails = this.lst;
+    offcanvasRef.componentInstance.dispclm = this.clm;
 
 
 
