@@ -86,6 +86,7 @@ export class LoginPageComponent implements OnInit {
 
   }
 
+
   login() {
     this.userFlag=false;
     this.passFlag=false;
@@ -103,7 +104,12 @@ export class LoginPageComponent implements OnInit {
           if(localStorage.getItem(this.check)===this.password){
             this.isLogin=true;
             localStorage.setItem("", this.username);
-            localStorage.setItem("tasks",'[]');
+            // @ts-ignore
+            let tasks = JSON.parse(localStorage.getItem("tasks"));
+            if(tasks == null){
+              tasks = [];
+            }
+            localStorage.setItem("tasks", JSON.stringify(tasks));
             this._router.navigate(['home'])
           }
           else{
